@@ -1,0 +1,405 @@
+
+/* ===== GENERAL SETTINGS ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #f4f6f9;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    background: linear-gradient(135deg, #003366, #0099cc);
+    color: white;
+    text-align: center;
+    padding: 20px 12px;
+}
+
+.header-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: 0 0 10px;
+    background: white;
+}
+
+.header-box h1 {
+    margin: 5px 0;
+    font-size: clamp(20px, 4vw, 36px);
+}
+
+.header-box p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ===== NAVIGATION ===== */
+
+nav {
+    background: #0055a5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 12px 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: #003366;
+}
+
+/* ===== SCHOOL BANNER ===== */
+
+.banner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* ===== CONTENT SECTIONS ===== */
+
+section {
+    width: calc(100% - 40px);
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    text-align: center;
+}
+
+section h2 {
+    color: #003366;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+h3 {
+    color: #003366;
+}
+
+/* ===== FACILITIES ===== */
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 8px;
+}
+
+/* ===== SCHOOL HIGHLIGHTS ===== */
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.highlights h3 {
+    background: #f0f5fa;
+    border-radius: 8px;
+    padding: 15px 5px;
+    margin: 0;
+    font-size: 17px;
+}
+
+/* ===== STUDENT ACTIVITIES GALLERY ===== */
+
+.activity-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.activity-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0;
+}
+
+/* ===== OLD GALLERY SUPPORT ===== */
+
+section:not(.banner) > img {
+    width: calc(50% - 20px);
+    max-width: 350px;
+    height: 180px;
+    object-fit: cover;
+    margin: 8px;
+}
+
+/* ===== VIDEO SECTION ===== */
+
+.activity-videos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ===== FORM ===== */
+
+input, textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+}
+
+button {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #003366;
+    color: white;
+    width: 100%;
+    padding: 18px 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* =================================
+   MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+
+    header {
+        padding: 15px 8px;
+    }
+
+    .logo {
+        width: 65px;
+        height: 65px;
+    }
+
+    .header-box h1 {
+        font-size: 21px;
+    }
+
+    .header-box p {
+        font-size: 12px;
+    }
+
+    /* Navigation */
+
+    nav {
+        padding: 7px 3px;
+        gap: 2px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 9px 6px;
+    }
+
+    /* Banner */
+
+    .banner {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .banner img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    /* Sections */
+
+    section {
+        width: calc(100% - 24px);
+        margin: 12px auto;
+        padding: 15px 10px;
+    }
+
+    section h2 {
+        font-size: 19px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    /* Facilities */
+
+    li {
+        font-size: 14px;
+        padding: 7px;
+    }
+
+    /* Highlights */
+
+    .highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .highlights h3 {
+        font-size: 13px;
+        padding: 12px 4px;
+    }
+
+    /* Student Gallery */
+
+    .activity-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .activity-gallery img {
+        width: 100%;
+        height: 130px;
+        margin: 0;
+    }
+
+    /* Old Gallery */
+
+    section:not(.banner) > img {
+        width: calc(50% - 16px);
+        height: 125px;
+        margin: 5px;
+    }
+
+    /* Videos */
+
+    .activity-videos {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    video {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Footer */
+
+    footer {
+        padding: 15px 8px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+/* Reduce empty side space on desktop */
+
+@media screen and (min-width: 601px) {
+    section:not(.banner) {
+        width: calc(100% - 50px);
+        max-width: 1350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* SAME WIDTH FOR ALL WEBSITE SECTIONS */
+
+section:not(.banner),
+.page-section:not(.banner) {
+    width: 100%;
+    max-width: none;
+    margin: 15px 0;
+    padding: 25px 5%;
+    box-sizing: border-box;
+}
+
+/* Banner full width */
+.banner,
+.banner img {
+    width: 100%;
+}
+
+/* Mobile screen */
+@media screen and (max-width: 600px) {
+    section:not(.banner),
+    .page-section:not(.banner) {
+        width: 100%;
+        max-width: none;
+        margin: 10px 0;
+        padding: 18px 12px;
+    }
+}
